@@ -19,13 +19,13 @@ public class UC02ExcluirEmpresa {
 		empresaDAO = new EmpresaDAOImp();
 		empresa = new Empresa();
 		//89.424.232/0001-80
-		empresa.setCnpj("89424232000190");
+		empresa.setCnpj("89424232000180");
 	
 	}
 
 	@Test
 	public void CT01UC01FBExclui_com_sucesso() {
-		assertEquals(1,empresaDAO.excluir(empresa.getCnpj()));
+		assertEquals(1,empresaDAO.exclui(empresa.getCnpj()));
 	}
 	
 	@AfterClass
