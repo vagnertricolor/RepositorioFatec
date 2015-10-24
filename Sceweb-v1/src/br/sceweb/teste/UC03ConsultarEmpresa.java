@@ -44,6 +44,18 @@ public class UC03ConsultarEmpresa {
 		assertEquals(false,empresa.equals(empresaDAO.consultaEmpresa("89424232000190")));
 	}
 	
+	@Test
+	public void CT03UC03FBConsultarEmpresas_com_sucesso() {
+
+		assertEquals(true,empresa.equals(empresaDAO.consultaEmpresas()));
+	}
+
+	
+	@Test
+	public void CT04UC03FBConsultarEmpresas_sem_sucesso() {
+
+		assertEquals(false,empresa.equals(empresaDAO.consultaEmpresas()));
+	}
 	
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
